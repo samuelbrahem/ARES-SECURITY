@@ -7,94 +7,160 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Nav -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <svg width="80" height="32" viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <text x="0" y="24" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="22" fill="#FBFBF9">RWS</text>
         </svg>
+      </a>
+      <div class="nav-links">
+        <a href="#problem" class="nav-link">Challenge</a>
+        <a href="#solution" class="nav-link">Solution</a>
+        <a href="#benefits" class="nav-link">Benefits</a>
+        <a href="pricing.html" class="nav-cta">View Pricing</a>
       </div>
-      <a href="mailto:sabrahem@rws.com" class="nav-cta">Contact Us</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#problem" class="mobile-link">Challenge</a>
+      <a href="#solution" class="mobile-link">Solution</a>
+      <a href="#benefits" class="mobile-link">Benefits</a>
+      <a href="pricing.html" class="mobile-link mobile-link-cta">View Pricing</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <header class="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="hero-inner">
-      <p class="hero-label">TimeArc for ARES Security</p>
-      <h1>One source of truth.<br>400+ integrations.<br>Zero documentation drift.</h1>
-      <p class="hero-sub">
-        Accurate, traceable documentation that scales with your most regulated environments.
-      </p>
-      <a href="mailto:sabrahem@rws.com" class="btn-primary">Reach out to discuss pricing</a>
+      <div class="reveal">
+        <p class="hero-label">TimeArc for ARES Security</p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <h1>One source of truth.<br>400+ integrations.<br>Zero documentation drift.</h1>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p class="hero-sub">
+          Accurate, traceable documentation that scales with your most regulated environments.
+        </p>
+      </div>
+      <div class="reveal reveal-delay-3 hero-actions">
+        <a href="pricing.html" class="btn-primary">View Pricing</a>
+        <a href="#pilot" class="btn-outline">Start a Pilot</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" id="scrollIndicator">
+      <span>Scroll to explore</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5"/>
+        <circle class="scroll-dot" cx="8" cy="8" r="2" fill="currentColor"/>
+      </svg>
     </div>
   </header>
 
+  <!-- Stats bar -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat fade-up">
+        <span class="stat-number" data-target="400">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Integrations supported</span>
+      </div>
+      <div class="stat fade-up fade-up-delay-1">
+        <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Documentation consistency</span>
+      </div>
+      <div class="stat fade-up fade-up-delay-2">
+        <span class="stat-number" data-target="0">0</span><span class="stat-suffix"></span>
+        <span class="stat-label">Content duplication</span>
+      </div>
+      <div class="stat fade-up fade-up-delay-3">
+        <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+        <span class="stat-label">Audit-ready traceability</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Problem -->
-  <section class="section section-dark">
+  <section class="section section-dark" id="problem">
     <div class="section-inner">
-      <h2>The problem with documentation at nuclear scale</h2>
+      <div class="section-header fade-up">
+        <span class="section-tag">The Challenge</span>
+        <h2>Documentation at nuclear scale is fundamentally different</h2>
+        <p class="section-lead">
+          In regulated environments, documentation errors are not inefficiencies. They are compliance violations, safety risks, and operational liabilities.
+        </p>
+      </div>
       <div class="problem-grid">
-        <div class="problem-card">
+        <div class="problem-card fade-up">
           <div class="problem-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
           <h3>Hundreds of integrations</h3>
           <p>Each system, product, and deployment has its own documentation. Keeping them consistent manually is unsustainable.</p>
+          <div class="problem-card-line"></div>
         </div>
-        <div class="problem-card">
+        <div class="problem-card fade-up fade-up-delay-1">
           <div class="problem-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3>Compliance exposure</h3>
           <p>In nuclear and critical infrastructure, outdated or inconsistent documentation is not just inefficient &mdash; it is a safety and regulatory risk.</p>
+          <div class="problem-card-line"></div>
         </div>
-        <div class="problem-card">
+        <div class="problem-card fade-up fade-up-delay-2">
           <div class="problem-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Duplicated effort</h3>
           <p>Teams rewrite the same content across integrations. Every copy introduces another opportunity for error and drift.</p>
+          <div class="problem-card-line"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Solution -->
-  <section class="section">
+  <section class="section" id="solution">
     <div class="section-inner">
-      <h2>How TimeArc solves this</h2>
-      <p class="section-lead">
-        TimeArc gives ARES Security a structured documentation layer that scales across every integration, product, and deployment &mdash; with full traceability and zero duplication.
-      </p>
+      <div class="section-header fade-up">
+        <span class="section-tag">The Solution</span>
+        <h2>How TimeArc solves this</h2>
+        <p class="section-lead">
+          TimeArc gives ARES Security a structured documentation layer that scales across every integration, product, and deployment &mdash; with full traceability and zero duplication.
+        </p>
+      </div>
       <div class="solution-grid">
-        <div class="solution-item">
+        <div class="solution-item fade-up">
           <div class="solution-number">01</div>
           <div>
             <h3>Single source of truth</h3>
             <p>Author content once. TimeArc stores it in a structured, version-controlled repository that becomes the definitive reference across your entire ecosystem.</p>
           </div>
         </div>
-        <div class="solution-item">
+        <div class="solution-item fade-up fade-up-delay-1">
           <div class="solution-number">02</div>
           <div>
             <h3>Reuse at scale</h3>
             <p>Modular content components are shared across 400+ integrations. Update one block &mdash; every integration that references it stays current.</p>
           </div>
         </div>
-        <div class="solution-item">
+        <div class="solution-item fade-up">
           <div class="solution-number">03</div>
           <div>
             <h3>Automatic propagation</h3>
             <p>Changes push downstream without manual intervention. Documentation stays aligned with reality across environments and deployments.</p>
           </div>
         </div>
-        <div class="solution-item">
+        <div class="solution-item fade-up fade-up-delay-1">
           <div class="solution-number">04</div>
           <div>
             <h3>Built for regulation</h3>
@@ -106,31 +172,52 @@
   </section>
 
   <!-- Benefits -->
-  <section class="section section-accent">
+  <section class="section section-accent" id="benefits">
     <div class="section-inner">
-      <h2>What this means for ARES Security</h2>
+      <div class="section-header fade-up">
+        <span class="section-tag">The Impact</span>
+        <h2>What this means for ARES Security</h2>
+      </div>
       <div class="benefits-grid">
-        <div class="benefit">
+        <div class="benefit fade-up">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
           <h3>Accuracy</h3>
           <p>Every integration references verified, current content. No stale pages, no conflicting versions.</p>
         </div>
-        <div class="benefit">
+        <div class="benefit fade-up fade-up-delay-1">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
           <h3>Scalability</h3>
           <p>Add new integrations without multiplying documentation workload. The architecture grows with you.</p>
         </div>
-        <div class="benefit">
+        <div class="benefit fade-up fade-up-delay-2">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
           <h3>Risk reduction</h3>
           <p>Eliminate the compliance gaps caused by inconsistent or outdated documentation in regulated environments.</p>
         </div>
-        <div class="benefit">
+        <div class="benefit fade-up">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <h3>Lower cost</h3>
           <p>Less duplication, less rework, fewer reviews. Teams spend time on value, not on reconciling content.</p>
         </div>
-        <div class="benefit">
+        <div class="benefit fade-up fade-up-delay-1">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
           <h3>Traceability</h3>
           <p>Know exactly what changed, when, and by whom. Meet audit requirements without additional overhead.</p>
         </div>
-        <div class="benefit">
+        <div class="benefit fade-up fade-up-delay-2">
+          <div class="benefit-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
           <h3>Control</h3>
           <p>Structured workflows and permissions ensure the right people approve the right content before it goes live.</p>
         </div>
@@ -138,12 +225,67 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Pilot CTA -->
+  <section class="section section-pilot" id="pilot">
+    <div class="section-inner">
+      <div class="pilot-grid">
+        <div class="pilot-content fade-up">
+          <span class="section-tag section-tag-light">Pilot Program</span>
+          <h2>See TimeArc work with your actual documentation</h2>
+          <p>
+            We are offering a structured pilot so ARES Security can validate TimeArc against real workflows before committing to a full rollout.
+          </p>
+          <p>
+            To scope the pilot accurately, we need access to your current documentation workflows, content structure, and integration map. This lets us configure TimeArc to reflect your actual environment from day one.
+          </p>
+          <div class="pilot-actions">
+            <a href="mailto:sabrahem@rws.com?subject=TimeArc%20Pilot%20%E2%80%93%20ARES%20Security&body=We%20are%20interested%20in%20discussing%20a%20TimeArc%20pilot.%20Please%20let%20us%20know%20the%20next%20steps%20for%20sharing%20our%20workflow%20documentation." class="btn-primary">Request a Pilot</a>
+            <a href="pricing.html" class="btn-ghost">View Pricing</a>
+          </div>
+        </div>
+        <div class="pilot-steps fade-up fade-up-delay-1">
+          <div class="pilot-step">
+            <div class="pilot-step-num">1</div>
+            <div>
+              <h4>Share your workflows</h4>
+              <p>Provide access to your current documentation processes, content structure, and integration landscape.</p>
+            </div>
+          </div>
+          <div class="pilot-step">
+            <div class="pilot-step-num">2</div>
+            <div>
+              <h4>We configure TimeArc</h4>
+              <p>Our team sets up taxonomy, branding, and content architecture mapped to your actual environment.</p>
+            </div>
+          </div>
+          <div class="pilot-step">
+            <div class="pilot-step-num">3</div>
+            <div>
+              <h4>Validate with real content</h4>
+              <p>Run a subset of your integrations through TimeArc. Measure accuracy, consistency, and time savings firsthand.</p>
+            </div>
+          </div>
+          <div class="pilot-step">
+            <div class="pilot-step-num">4</div>
+            <div>
+              <h4>Decision with confidence</h4>
+              <p>Move forward with full deployment backed by concrete results from your own documentation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
   <section class="section section-cta">
-    <div class="section-inner cta-inner">
+    <div class="section-inner cta-inner fade-up">
       <h2>Ready to see how TimeArc supports your expansion into nuclear?</h2>
       <p>Let's discuss how structured documentation scales across your integration ecosystem.</p>
-      <a href="mailto:sabrahem@rws.com" class="btn-primary btn-large">Reach out to discuss pricing</a>
+      <div class="cta-actions">
+        <a href="pricing.html" class="btn-primary btn-large">View Pricing</a>
+        <a href="mailto:sabrahem@rws.com?subject=TimeArc%20Inquiry%20%E2%80%93%20ARES%20Security" class="btn-outline-light">Contact Us</a>
+      </div>
     </div>
   </section>
 
@@ -151,9 +293,14 @@
   <footer class="footer">
     <div class="footer-inner">
       <span class="footer-brand">RWS</span>
+      <div class="footer-links">
+        <a href="pricing.html">Pricing</a>
+        <a href="mailto:sabrahem@rws.com">Contact</a>
+      </div>
       <span class="footer-copy">&copy; 2026 RWS. All rights reserved.</span>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
