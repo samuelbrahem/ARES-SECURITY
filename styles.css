@@ -1,0 +1,436 @@
+/* ========================================
+   TimeArc for ARES Security — Product Page
+   RWS-inspired branding
+   ======================================== */
+
+:root {
+  --purple-deep: #250143;
+  --purple-primary: #3E016F;
+  --purple-mid: #5A1A8F;
+  --violet: #8353FD;
+  --violet-light: #A67FFE;
+  --magenta: #E60054;
+  --bg-light: #FBFBF9;
+  --bg-soft: #F3EEFF;
+  --bg-card: #FFFFFF;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A6A;
+  --text-on-dark: #FBFBF9;
+  --text-muted-dark: #C4B5D9;
+  --radius: 0.75rem;
+  --radius-lg: 1.25rem;
+  --max-width: 1120px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* ---- Nav ---- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(37, 1, 67, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(131, 83, 253, 0.15);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-cta {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(251, 251, 249, 0.3);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-cta:hover {
+  background: rgba(251, 251, 249, 0.1);
+  border-color: rgba(251, 251, 249, 0.6);
+}
+
+/* ---- Hero ---- */
+.hero {
+  background: var(--purple-deep);
+  background: linear-gradient(165deg, var(--purple-deep) 0%, var(--purple-primary) 50%, #4A0E7C 100%);
+  padding: 10rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(131, 83, 253, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(230, 0, 84, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet-light);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-on-dark);
+  max-width: 780px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  color: var(--text-muted-dark);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: var(--violet);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(131, 83, 253, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--violet-light);
+  box-shadow: 0 4px 20px rgba(131, 83, 253, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.0625rem;
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.section-lead {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.section-dark {
+  background: var(--bg-light);
+}
+
+.section-accent {
+  background: var(--bg-soft);
+}
+
+/* ---- Problem Section ---- */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.problem-card {
+  background: var(--bg-card);
+  border: 1px solid #E8E0F0;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+  box-shadow: 0 4px 24px rgba(62, 1, 111, 0.08);
+}
+
+.problem-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--purple-primary);
+}
+
+.problem-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--text-primary);
+}
+
+.problem-card p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- Solution Section ---- */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.solution-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid #E8E0F0;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.solution-item:hover {
+  box-shadow: 0 4px 24px rgba(62, 1, 111, 0.08);
+}
+
+.solution-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--violet);
+  min-width: 40px;
+  line-height: 1.3;
+}
+
+.solution-item h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.solution-item p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- Benefits Section ---- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.benefit {
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid #DDD4EC;
+}
+
+.benefit h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--purple-primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefit p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- CTA Section ---- */
+.section-cta {
+  background: var(--purple-deep);
+  background: linear-gradient(165deg, var(--purple-deep) 0%, var(--purple-primary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(131, 83, 253, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-cta h2 {
+  color: var(--text-on-dark);
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
+.section-cta p {
+  color: var(--text-muted-dark);
+  font-size: 1.0625rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: #1A0130;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(131, 83, 253, 0.1);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-on-dark);
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--text-muted-dark);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .problem-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 8rem 1.25rem 4rem;
+  }
+
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .problem-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-inner {
+    padding: 0 1.25rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
